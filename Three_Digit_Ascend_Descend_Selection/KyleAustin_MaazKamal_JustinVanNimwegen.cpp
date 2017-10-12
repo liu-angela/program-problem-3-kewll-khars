@@ -1,4 +1,5 @@
-/* 
+/*
+Edited by Angela Liu
 Maaz Kamal, Kyle Austin, Justin Van Nimwegen, Yezen Higazin - 4
 
 Assignment Name : Three_Digit_Ascend_Descend_Selection
@@ -23,25 +24,28 @@ void pause() {
 }
 
 void main() {
-	int x;
-	cout << "Choose a 3 Digit #" << endl;
-	cin >> x;
-	cout << "You Chose " << x << endl;
+	for (int i = 0; i < 30; i++) {
+		int x;
+		cout << i << endl;
+		cout << "Choose a 3 Digit #" << endl;
+		cin >> x;
+		cout << "You Chose " << x << endl;
 
-	int A = x / 100;
-	int B = x % 100 / 10;
-	int C = x % 10;
+		int A = x / 100;
+		int B = x % 100 / 10;
+		int C = x % 10;
 
-	if ((A > B) && (B > C)) {
-		cout << "Decending" << endl;
+		if ((A > B) && (B > C)) {
 
-	}
-	else if ((A < B) && (B < C)) {
-		cout << "Acending" << endl;
+			cout << x << " is Descending" << endl;
+
 		}
-	else {
-		cout << "Neither" << endl;
+		else if ((A < B) && (B < C)) {
+			cout << x << " is Ascending" << endl;
+		}
+		else {
+			cout << "Neither" << endl;
+		}
+		}
+		pause();
 	}
-
-	pause();
-}
